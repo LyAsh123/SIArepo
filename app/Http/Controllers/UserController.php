@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Traits\ApiResponser;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
@@ -7,8 +9,11 @@ use App\Models\User;
 use DB;
 
 Class UserController extends Controller {
-    private $request;
+
+    use ApiResponser;
     
+    private $request;
+
     public function __construct(Request $request){
         $this->request = $request;
     }
