@@ -65,8 +65,7 @@ env('DB_PASSWORD', null),
  'prefix' => env('DB_PREFIX', ''),
  // 'strict' =>
 env('DB_STRICT_MODE', false),
- // 'engine' => env('DB_ENGINE',
-null),
+ // 'engine' => env('DB_ENGINE',null),
  // 'timezone' =>
 env('DB_TIMEZONE', '+00:00'),
  ],
