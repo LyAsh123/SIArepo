@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            MVC Framework
+        </title>
+        <script src="mvc.js"></script>
+        <body bgcolor="Skyblue">
+            <H1 align="center">
+                Navigation
+            </H1>
+            <div  align="center">
+                <a href="index.html#/home" >
+                    Home
+                </a>
+                <a href="index.html#/contact">
+                    |Contacts
+                </a>
+                <a href="index.html#/home">
+                    |About
+                </a>
+            </div>
+            <br>
+            <br>
+            <div>
+                <h2  align="center">
+                    Display Info
+                </h2>
+            </div>
+            <div>
+            <script>
+                jsMvc.AddRoute(HomeController, 'home', 'Views/home.html');
+                jsMvc.AddRoute(ContactController, 'contact', 'Views/contact.html');
+                jsMvc.AddRoute(AboutController, 'about', 'Views/about.html');
+                jsMvc.Initialize();
+
+                function HomeController(model) {
+                    model.Message = 'Hello World';
+                }
+                function ContactController(model){
+                    model.FirstName = 'Ashly';
+                    model.Lastname = 'Galagnara';
+                    model.Phone = '09709526974';
+                }
+                function AboutController(model) {
+
+                }
+            </script>
+            </div>
+        </body>
+    </head>
+</html>
